@@ -24,3 +24,7 @@ There are two types of users. The administrators users have the ability to chang
 - resources\views\front
 - app\Http\Controllers    `AuthorController.php`
 - routes    `web.php`
+
+> 3rd Commit : Integrate TablerAdmin template
+
+- resources\views\back\layouts\inc    `header.blade.php`   `footer.blade.php`
