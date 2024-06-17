@@ -42,3 +42,7 @@ There are two types of users. The administrators users have the ability to chang
 - resources\views\back\pages\auth    `login.blade.php`
 - resources\views\back\layouts\inc    `header.blade.php`
 - app\Http\Controllers      `AuthorController.php`
+
+> 5 : Login process - Login with username(case sensitive) or email
+
+- app\Livewire   `AuthorLoginForm.php`
