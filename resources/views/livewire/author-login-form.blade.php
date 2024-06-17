@@ -6,6 +6,12 @@
         </div>
     @endif
 
+    @if(Session::get('success'))
+        <div class="alert alert-success">
+            {!! Session::get('success') !!}
+        </div>
+    @endif
+
     <form action="./" wire:submit.pretend="LoginHandler()" method="post" autocomplete="off" novalidate="">
         <div class="card card-md">
         <div class="card-body">

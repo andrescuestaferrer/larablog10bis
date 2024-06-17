@@ -46,3 +46,13 @@ There are two types of users. The administrators users have the ability to chang
 > 5 : Login process - Login with username(case sensitive) or email
 
 - app\Livewire   `AuthorLoginForm.php`
+
+> 6 : Login process - Forgot and Reset password (Validate regex and strong pwd custom rule)
+
+- app\Livewire   `AuthorForgotForm.php`    `AuthorResetForm.php`
+- resources\views\livewire    `author-forgot-form.blade.php`  `author-reset-form.blade.php`  `author-login-form.blade.php`
+- resources\views     `forgot-email-template.blade.php`
+- resources\views\back\pages     `forgot.blade.php`
+- routes              `author.php`
+- app\Http\Controllers  `AuthorController.php
+- resources\views\back\pages\auth    `reset.blade.php`
