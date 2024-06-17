@@ -28,3 +28,17 @@ There are two types of users. The administrators users have the ability to chang
 > 3rd Commit : Integrate TablerAdmin template
 
 - resources\views\back\layouts\inc    `header.blade.php`   `footer.blade.php`
+
+> 4 : Laravel Livewire - Login process
+
+- resources\views\back\layouts    `auth-layout.blade.php`   `pages-layout.blade.php`
+- resources\views\livewire    `author-login-form.blade.php`
+- app\Models           `Type.php`    `User.php`
+- database\migrations   `2024_06_17_093115_create_types_table.php`
+- routes    `web.php`   `author.php`
+- app\Providers      `RouteServicesProvider.php`
+- app\Http\Middleware    `Authenticate.php`    `RedirectIfAuthenticated.php`
+- app\Livewire   `AuthorLoginForm.php`
+- resources\views\back\pages\auth    `login.blade.php`
+- resources\views\back\layouts\inc    `header.blade.php`
+- app\Http\Controllers      `AuthorController.php`
