@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Type;
 
 class User extends Authenticatable
 {
@@ -47,4 +48,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //DB::table('types')->where(['id' => $this->type]);  //Type 1->N User;
+    public function authorType() {
+
+        // dd($this->belongsTo(Type::class, 'type', 'id')) ; 
+        return $this->belongsTo(Type::class, 'type', 'id');
+    }
 }

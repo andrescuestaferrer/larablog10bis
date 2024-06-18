@@ -56,3 +56,11 @@ There are two types of users. The administrators users have the ability to chang
 - routes              `author.php`
 - app\Http\Controllers  `AuthorController.php
 - resources\views\back\pages\auth    `reset.blade.php`
+
+> 7 : Blog Administration  - Author/Profile Page - (Livewire-UpgradeGuide-2.x-3.x Events)
+
+- routes              `author.php`
+- resources\views\back\layouts\inc    `header.blade.php`
+- resources\views\back\pages    `profile.blade.php`
+- app\Livewire   `TopHeader.php`  `AuthorProfileHeader.php`   `AuthorPersonalDetails.php`
+- resources\views\livewire    `top-header.blade.php`    `author-profile-header.blade.php`  `author-personal-details.blade.php`
