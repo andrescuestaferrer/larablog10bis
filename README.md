@@ -64,3 +64,11 @@ There are two types of users. The administrators users have the ability to chang
 - resources\views\back\pages    `profile.blade.php`
 - app\Livewire   `TopHeader.php`  `AuthorProfileHeader.php`   `AuthorPersonalDetails.php`
 - resources\views\livewire    `top-header.blade.php`    `author-profile-header.blade.php`  `author-personal-details.blade.php`
+
+> 8 : Integrate jQuery Toast Messages with traits implemented in Commonfunctions.php
+
+- public\back\dist\libs\jquery    `jquery-3.6.0.min.js`
+- public\back\dist\libs\ijabo     `ijabo.min.js`    `ijabo.min.css`
+- resources\views\back\layouts    `pages-layout.blade.php`
+- app\Livewire   `AuthorPersonalDetails.php`
+- public\traits  `CommonFunctions.php` 

@@ -19,6 +19,7 @@
     <link href="./back/dist/css/tabler-flags.min.css?1684106062" rel="stylesheet"/>
     <link href="./back/dist/css/tabler-payments.min.css?1684106062" rel="stylesheet"/>
     <link href="./back/dist/css/tabler-vendors.min.css?1684106062" rel="stylesheet"/>
+    <link rel="stylesheet" href="/back/dist/libs/ijabo/ijabo.min.css" />
     @stack('stylesheets')
     @livewireStyles
     <link href="./back/dist/css/demo.min.css?1684106062" rel="stylesheet"/>
@@ -50,6 +51,8 @@
     </div>
 
     <!-- Libs JS -->
+    <script src="./back/dist/libs/jquery/jquery-3.6.0.min.js" ></script>
+    <script src="/back/dist/libs/ijabo/ijabo.min.js" ></script>
     <script src="./back/dist/libs/apexcharts/dist/apexcharts.min.js?1684106062" defer></script>
     <script src="./back/dist/libs/jsvectormap/dist/js/jsvectormap.min.js?1684106062" defer></script>
     <script src="./back/dist/libs/jsvectormap/dist/maps/world.js?1684106062" defer></script>
@@ -58,6 +61,23 @@
     <script src="./back/dist/js/tabler.min.js?1684106062" defer></script>
     @stack('scripts')
     @livewireScripts
+    <script>
+        window.addEventListener('showToastr', function(event){
+            toastr.remove();
+            switch(event.detail.type) {
+                case 'info':
+                    toastr.info(event.detail.message) ; break;
+                case 'success':
+                    toastr.success(event.detail.message) ; break;
+                case 'error':
+                    toastr.error(event.detail.message) ; break;
+                case 'warning':
+                    toastr.warning(event.detail.message) ; break;
+                default:
+                    return false;
+            }
+        });
+    </script>
     <script src="./back/dist/js/demo.min.js?1684106062" defer></script>
 
   </body>
