@@ -72,3 +72,9 @@ There are two types of users. The administrators users have the ability to chang
 - resources\views\back\layouts    `pages-layout.blade.php`
 - app\Livewire   `AuthorPersonalDetails.php`
 - public\traits  `CommonFunctions.php` 
+
+> 9 :  Blog Administration  - Change Password Form (Validate regex and strong pwd custom rule)
+
+- resources\views\back\pages    `profile.blade.php`
+- app\Livewire   `AuthorChangePasswordForm.php`  
+- resources\views\livewire    `author-change-password-form.blade.php` 

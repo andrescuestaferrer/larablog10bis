@@ -27,14 +27,11 @@
         </div>
         <div class="card-body">
             <div class="tab-content">
-                <div class="tab-pane active show" id="tabs-details">
-                    
-                @livewire('author-personal-details')
-
+                <div class="tab-pane active show" id="tabs-details"> 
+                    @livewire('author-personal-details')
                 </div>
                 <div class="tab-pane" id="tabs-password">
-                    <h4>Password tab</h4>
-                    <div>Fringilla egestas nunc quis tellus diam rhoncus ultricies tristique enim at diam, sem nunc amet, pellentesque id egestas velit sed</div>
+                    @livewire('author-change-password-form')
                 </div>
             </div>
         </div>
