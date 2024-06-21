@@ -12,4 +12,4 @@ There are two types of users. The administrators users have the ability to chang
 
 ## Changelog
 
-Please see [CHANGELOG](./CHANGELOG.md)"Detailed history of commits and the files involved" for more information on what has changed recently.
+Please see [CHANGELOG](./CHANGELOG.md "Detailed history of commits and the files involved") for more information on what has changed recently.
