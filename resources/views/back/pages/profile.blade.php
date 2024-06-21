@@ -40,3 +40,27 @@
 </div>
 
 @endsection
+
+@push('scripts')
+    <script>
+        $('#changeAuthorPictureFile').ijaboCropTool({
+            preview : '',
+            setRatio:1,
+            allowedExtensions: ['jpg', 'jpeg','png'],
+            buttonsText:['CROP','QUIT'],
+            buttonsColor:['#30bf7d','#ee5155', -15],
+            processUrl:'{{ route("author.change-profile-picture") }}',
+            withCSRF:['_token','{{ csrf_token() }}'],
+            onSuccess:function(message, element, status){
+                // alert(message);
+                Livewire.dispatch('updateAuthorProfileHeader');
+                Livewire.dispatch('updateTopHeader');
+                toastr.success(message);
+            },
+            onError:function(message, element, status){
+                // alert(message);
+                toastr.error(message);
+            }
+        })
+    </script>
+@endpush

@@ -78,3 +78,14 @@ There are two types of users. The administrators users have the ability to chang
 - resources\views\back\pages    `profile.blade.php`
 - app\Livewire   `AuthorChangePasswordForm.php`  
 - resources\views\livewire    `author-change-password-form.blade.php` 
+
+> 10 :  Blog Administration  - Change Profile Picture
+
+- public\back\dist\image\authors    `default-img.png` `AIMG1171896834756899.jpg`
+- app\Models   `User.php`  
+- resources\views\livewire    `author-profile-header.blade.php`   `top-header.blade.php`
+- public\back\dist\image\libs\ijaboCropTools    `ijaboCropTool.min.css`    `ijaboCropTool.min.js`
+- resources\views\back\layouts    `pages-layout.blade.php`
+- routes    `author.php`
+- resources\views\back\pages    `profile.blade.php`
+- app\Http\Controllers    `AuthorController.php`s
