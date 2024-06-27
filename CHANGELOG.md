@@ -80,3 +80,12 @@
 
 > 11 : Extract log of changes from README.md to CHANGELOG.md
 -  `README.md` `CHANGELOG.md`
+
+> 12 : Blog Administration  - Blog Settings Page 
+- routes    `author.php`
+- resources\views\livewire    `top-header.blade.php`     `author-general-settings.blade.php`    `author-footer.blade.php` 
+- resources\views\back\pages    `settings.blade.php`
+- app\Models                   `Setting.php`
+- database\migrations          `yyyy_mm_dd_hhmmss_create_settings_table.php`
+- app\Livewire   `AuthorGeneralSettings.php`    `AuthorFooter.php`
+- resources\views\back\layouts\inc    `footer.blade.php`

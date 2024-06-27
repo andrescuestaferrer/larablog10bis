@@ -177,7 +177,7 @@
                   </a>
                   <div class="dropdown-menu">
                       <div class="dropdown-menu-column">
-                        <a class="dropdown-item" href="./empty.html">
+                        <a class="dropdown-item" href="{{ route('author.settings') }}">
                           General Settings
                         </a>
 
