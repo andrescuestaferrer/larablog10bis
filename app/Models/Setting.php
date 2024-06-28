@@ -16,4 +16,8 @@ class Setting extends Model
         'blog_logo',
         'blog_favicon',
      ];
+
+     public function getBlogLogoAttribute($value) {
+        return asset('back/dist/img/logo-favicon/'.$value);
+    }
 }

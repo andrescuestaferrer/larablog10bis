@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\Setting;
 use Illuminate\Support\Facades\File;
 
 class AuthorController extends Controller
@@ -48,4 +49,29 @@ class AuthorController extends Controller
             return response()->json(['status' => 0, 'msg' => 'Something went wrong when updating profile picture']);
         }
     }
+
+    public function changeBlogLogo(Request $request) {
+        $settings = Setting::find(1);
+        $logo_path = 'back/dist/img/logo-favicon/';
+        $old_logo = $settings->getAttributes()['blog_logo'];
+        $file = $request->file('blog_logo');
+        $filename = time().'_'.rand(1,100000).'_larablog_logo.png';
+
+        if ($request->hasFile('blog_logo')) {
+            if ($old_logo != null && File::exists(public_path($logo_path.$old_logo)) ) {
+                File::delete(public_path($logo_path.$old_logo));
+            }
+            $upload = $file->move(public_path($logo_path), $filename);
+            if ($upload) {
+                $settings->update([
+                    'blog_logo' => $filename
+                ]);
+                return response()->json(['status' => 1, 'msg' => 'Your logo blog has been successfully updated']);
+            } else {
+                return response()->json(['status' => 0, 'msg' => 'Something went wrong when updating logo blog']);
+            }
+        }
+    }
+
+
 }

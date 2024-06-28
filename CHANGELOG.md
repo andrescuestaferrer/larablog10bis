@@ -89,3 +89,14 @@
 - database\migrations          `yyyy_mm_dd_hhmmss_create_settings_table.php`
 - app\Livewire   `AuthorGeneralSettings.php`    `AuthorFooter.php`
 - resources\views\back\layouts\inc    `footer.blade.php`
+
+> 13 : Blog Administration  - Blog Logo 
+- public\back\dist\libs\ijaboViewer    `jquery.ijaboViewer.min.js`
+- public\back\dist\image\logo-favicon   `xxxxxxxxxx_xxxxx_larablog_logo.png`
+- resources\views\back\layouts    `pages-layout.blade.php`
+- resources\views\back\pages    `settings.blade.php`
+- app\model    `Setting.php` 
+- routes    `author.php`
+- app\Http\Controllers    `AuthorController.php`
+- resources\views\livewire    `top-header.blade.php`
+- resources\views\back\pages\auth    `login.blade.php`    `reset.blade.php`    `forgot.blade.php`

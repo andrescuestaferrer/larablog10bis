@@ -52,9 +52,10 @@
     </div>
 
     <!-- Libs JS -->
-    <script src="./back/dist/libs/jquery/jquery-3.6.0.min.js" ></script>
+    <script src="/back/dist/libs/jquery/jquery-3.6.0.min.js" ></script>
     <script src="/back/dist/libs/ijabo/ijabo.min.js" ></script>
     <script src="/back/dist/libs/ijaboCropTool/ijaboCropTool.min.js"></script>
+    <script src="/back/dist/libs/ijaboViewer/jquery.ijaboViewer.min.js"></script>
     <script src="./back/dist/libs/apexcharts/dist/apexcharts.min.js?1684106062" defer></script>
     <script src="./back/dist/libs/jsvectormap/dist/js/jsvectormap.min.js?1684106062" defer></script>
     <script src="./back/dist/libs/jsvectormap/dist/maps/world.js?1684106062" defer></script>
