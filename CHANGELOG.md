@@ -100,3 +100,11 @@
 - app\Http\Controllers    `AuthorController.php`
 - resources\views\livewire    `top-header.blade.php`
 - resources\views\back\pages\auth    `login.blade.php`    `reset.blade.php`    `forgot.blade.php`
+
+> 14 : Blog Administration  - Blog favicon 
+- resources\views\back\pages    `settings.blade.php`
+- routes    `author.php`
+- app\model    `Setting.php` 
+- resources\views\back\layouts    `pages-layout.blade.php`    `auth-layout.blade.php`
+- app\Http\Controllers    `AuthorController.php`
+- public\back\dist\image\logo-favicon   `xxxxxxxxxx_xxxxx_larablog_favicon.ico`

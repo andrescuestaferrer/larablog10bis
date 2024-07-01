@@ -73,5 +73,28 @@ class AuthorController extends Controller
         }
     }
 
+    public function changeBlogFavicon(Request $request) {
+        $settings = Setting::find(1);
+        $favicon_path = 'back/dist/img/logo-favicon/';
+        $old_favicon = $settings->getAttributes()['blog_favicon'];
+        $file = $request->file('blog_favicon');
+        $filename = time().'_'.rand(1,100000).'_larablog_favicon.ico';
+
+        if ($request->hasFile('blog_favicon')) {
+            if ($old_favicon != null && File::exists(public_path($favicon_path.$old_favicon)) ) {
+                File::delete(public_path($favicon_path.$old_favicon));
+            }
+            $upload = $file->move(public_path($favicon_path), $filename);
+            if ($upload) {
+                $settings->update([
+                    'blog_favicon' => $filename
+                ]);
+                return response()->json(['status' => 1, 'msg' => 'Your favicon blog has been successfully updated']);
+            } else {
+                return response()->json(['status' => 0, 'msg' => 'Something went wrong when updating favicon blog']);
+            }
+        }
+    }
+
 
 }
