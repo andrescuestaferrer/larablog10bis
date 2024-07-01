@@ -108,3 +108,8 @@
 - resources\views\back\layouts    `pages-layout.blade.php`    `auth-layout.blade.php`
 - app\Http\Controllers    `AuthorController.php`
 - public\back\dist\image\logo-favicon   `xxxxxxxxxx_xxxxx_larablog_favicon.ico`
+
+> 15 : Blog Administration  - Blog logo & favicon - Unify changeBlogLogo changeBlogFavicon into changeBlogPic
+ - resources\views\back\pages    `settings.blade.php`
+- routes    `author.php`
+- app\Http\Controllers    `AuthorController.php`

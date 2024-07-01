@@ -43,6 +43,7 @@
                             @csrf
                             <div class="mb-2" >
                                 <input type="file" name="blog_logo" class="form-control">
+                                <input type="hidden" value="blog_logo" name="changeBlogPic" >
                             </div>
                             <button class="btn btn-primary">Change logo</button>
                         </form>
@@ -56,6 +57,7 @@
                             @csrf
                             <div class="mb-2" >
                                 <input type="file" name="blog_favicon" class="form-control">
+                                <input type="hidden" value="blog_favicon" name="changeBlogPic" >
                             </div>
                             <button class="btn btn-primary">Change favicon</button>
                         </form>

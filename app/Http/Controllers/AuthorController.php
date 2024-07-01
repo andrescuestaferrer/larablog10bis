@@ -50,48 +50,32 @@ class AuthorController extends Controller
         }
     }
 
-    public function changeBlogLogo(Request $request) {
+    // Change Blog logo/Favicon get from file on 'back/dist/img/logo-favicon/'
+    //   whose name is in the Database  '\App\Models\Setting::find(1)->$request['changeBlogPic']' 
+    //   and $request['changeBlogPic'] is the field of the table settings that contains the name of the file
+    public function changeBlogPic(Request $request) {
+        $whatPic = $request['changeBlogPic'];
+        // dd('$whatPic= '.$whatPic);  // 'blog_logo' or 'blog_favicon'
+        $file = $request->file($whatPic);
+        $extension = $file->getClientOriginalExtension();
+        $pic_path = 'back/dist/img/logo-favicon/';
+       
         $settings = Setting::find(1);
-        $logo_path = 'back/dist/img/logo-favicon/';
-        $old_logo = $settings->getAttributes()['blog_logo'];
-        $file = $request->file('blog_logo');
-        $filename = time().'_'.rand(1,100000).'_larablog_logo.png';
+        $old_pic = $settings->getAttributes()[$whatPic];
+        $filename = time().'_'.rand(1,100000).'_lara'.$whatPic.$extension;
 
-        if ($request->hasFile('blog_logo')) {
-            if ($old_logo != null && File::exists(public_path($logo_path.$old_logo)) ) {
-                File::delete(public_path($logo_path.$old_logo));
+        if ($request->hasFile($whatPic)) {
+            if ($old_pic != null && File::exists(public_path($pic_path.$old_pic)) ) {
+                File::delete(public_path($pic_path.$old_pic));
             }
-            $upload = $file->move(public_path($logo_path), $filename);
+            $upload = $file->move(public_path($pic_path), $filename);
             if ($upload) {
                 $settings->update([
-                    'blog_logo' => $filename
+                    $whatPic => $filename
                 ]);
-                return response()->json(['status' => 1, 'msg' => 'Your logo blog has been successfully updated']);
+                return response()->json(['status' => 1, 'msg' => 'Your '.$whatPic.' has been successfully updated']);
             } else {
-                return response()->json(['status' => 0, 'msg' => 'Something went wrong when updating logo blog']);
-            }
-        }
-    }
-
-    public function changeBlogFavicon(Request $request) {
-        $settings = Setting::find(1);
-        $favicon_path = 'back/dist/img/logo-favicon/';
-        $old_favicon = $settings->getAttributes()['blog_favicon'];
-        $file = $request->file('blog_favicon');
-        $filename = time().'_'.rand(1,100000).'_larablog_favicon.ico';
-
-        if ($request->hasFile('blog_favicon')) {
-            if ($old_favicon != null && File::exists(public_path($favicon_path.$old_favicon)) ) {
-                File::delete(public_path($favicon_path.$old_favicon));
-            }
-            $upload = $file->move(public_path($favicon_path), $filename);
-            if ($upload) {
-                $settings->update([
-                    'blog_favicon' => $filename
-                ]);
-                return response()->json(['status' => 1, 'msg' => 'Your favicon blog has been successfully updated']);
-            } else {
-                return response()->json(['status' => 0, 'msg' => 'Something went wrong when updating favicon blog']);
+                return response()->json(['status' => 0, 'msg' => 'Something went wrong when updating '.$whatPic]);
             }
         }
     }
