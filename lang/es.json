@@ -1,6 +1,6 @@
 {
     "I love programming.": "Me encanta programar.",
     "Password" : "Contraseña",
-    "Password is required" : "El campo contraseña es obligatorio."
+    "Password is required" : "El campo :attribute es obligatorio."
 
 }

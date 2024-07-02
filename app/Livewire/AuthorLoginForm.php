@@ -63,7 +63,7 @@ class AuthorLoginForm extends Component
             ],[
                 // 'login_id.required' => 'Username is required',
                 // 'login_id.exists'   => 'Username is not registered in database',
-                'password.required' => __('Password is required')
+                'password.required' => __('Password is required', ['attribute' => __('Password')])
                 // 'password.required' => __('validation.custom.password.required')
                 // 'password.required' => __('required', ['attribute' => 'contraseña']) 
             ]);

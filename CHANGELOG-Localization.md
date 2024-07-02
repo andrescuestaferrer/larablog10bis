@@ -7,3 +7,9 @@
 - routes    `author.php` 
 - app\Livewire   `AuthorLoginForm.php`
 - resources\views\livewire    `author-login-form.blade.php`
+
+> L-2 : Replacing parameters in a locale language file json
+
+- `CHANGELOG-Localization.md`
+- lang    `es.json`
+- app\Livewire   `AuthorLoginForm.php`
