@@ -26,7 +26,7 @@
             </div>
             <div class="mb-2">
                 <label class="form-label">
-                Password
+                {{ __('Password') }}
                 <span class="form-label-description">
                     <a href="{{ route('author.forgot-password') }}">I forgot password</a>
                 </span>

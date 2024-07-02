@@ -8,6 +8,8 @@ use App\Models\User;
 use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Support\Facades\DB;
 
+use Illuminate\Support\Facades\App; 
+
 // class Uppercase implements Rule
 // {
 //     public function passes($attribute, $value)
@@ -37,6 +39,8 @@ class AuthorLoginForm extends Component
     public $login_id, $password, $username; 
 
     public function LoginHandler() {
+        // $oldLocale = App::currentLocale() ; App::setLocale('es'); 
+
         $this->username = $this->login_id;
         $fieldType = filter_var($this->login_id, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
         if ( $fieldType == 'email') {
@@ -59,9 +63,13 @@ class AuthorLoginForm extends Component
             ],[
                 // 'login_id.required' => 'Username is required',
                 // 'login_id.exists'   => 'Username is not registered in database',
-                'password.required' => 'Password is required'
+                'password.required' => __('Password is required')
+                // 'password.required' => __('validation.custom.password.required')
+                // 'password.required' => __('required', ['attribute' => 'contraseña']) 
             ]);
         }
+
+        // App::setLocale($oldLocale);
 
         $credentials = array($fieldType => $this->login_id, 'password' => $this->password);
 

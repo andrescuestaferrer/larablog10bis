@@ -113,3 +113,5 @@
  - resources\views\back\pages    `settings.blade.php`
 - routes    `author.php`
 - app\Http\Controllers    `AuthorController.php`
+
+Please see [CHANGELOG-Localization](./CHANGELOG-Localization.md "History of commits involved in Localization") for  information on what has changed involved in Localization, separated in a new branch.
