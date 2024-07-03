@@ -13,3 +13,8 @@
 - `CHANGELOG-Localization.md`
 - lang    `es.json`
 - app\Livewire   `AuthorLoginForm.php`
+
+> L-3 : Importing locale language files for es language
+
+- `CHANGELOG-Localization.md`
+- lang\es   [`actions.php`](./lang/es/actions.php) [`auth.php`](./lang/es/auth.php)  [`pagination.php`](./lang/es/pagination.php)  [`passwords.php`](./lang/es/passwords.php)  [`validation.php`](./lang/es/validation.php)
