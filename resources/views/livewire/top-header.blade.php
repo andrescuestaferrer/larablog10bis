@@ -123,6 +123,7 @@
                 <form action="{{ route('author.logout') }}" id="logout-form" method="POST">@csrf</form>
               </div>
             </div>
+            @include('back.layouts.inc.lang-switcher') 
           </div>
           <div class="collapse navbar-collapse" id="navbar-menu">
             <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">

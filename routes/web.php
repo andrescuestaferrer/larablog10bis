@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Middleware\Localization;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,7 +15,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('lang/change', [Localization::class, 'change'])->name('changeLang');
+
+Route::get('language/{locale?}', function ($locale = null) {
+
+    // trying to read an optional locale GET parameter and set the current locale accordingly
+    if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+        app()->setLocale($locale);
+        session()->put('locale', $locale);
+    }
+    
+    return redirect()->back();
 });
+
+
 

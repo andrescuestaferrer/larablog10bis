@@ -33,14 +33,20 @@
       }
     </style>
   </head>
-  <body  class=" d-flex flex-column">
-    <script src="./back/dist/js/demo-theme.min.js?1684106062"></script>
-    @yield('content')    
-    <!-- Libs JS -->
-    <!-- Tabler Core -->
-    <script src="./back/dist/js/tabler.min.js?1684106062" defer></script>
-    @stack('scripts')
-    @livewireScripts
-    <script src="./back/dist/js/demo.min.js?1684106062" defer></script>
-  </body>
+    <body  class=" d-flex flex-column">
+
+      @include('back.layouts.inc.lang-switcher') 
+
+      <script src="./back/dist/js/demo-theme.min.js?1684106062"></script>
+      @yield('content')    
+      <!-- Libs JS -->
+      <script src="./back/dist/libs/jquery/jquery-3.6.0.min.js" ></script>
+      <!-- Tabler Core -->
+      <script src="./back/dist/js/tabler.min.js?1684106062" defer></script>
+      @stack('scripts')
+
+      @livewireScripts
+      <script src="./back/dist/js/demo.min.js?1684106062" defer></script>
+
+    </body>
 </html>

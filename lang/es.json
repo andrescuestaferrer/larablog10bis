@@ -1,6 +1,9 @@
 {
-    "I love programming.": "Me encanta programar.",
-    "Password" : "Contraseña",
-    "Password is required" : "El campo :attribute es obligatorio."
-
+    "Language"                         : "Idioma",
+    "English"                          : "Inglés",
+    "Spanish"                          : "Español",
+    "French"                           : "Francés",
+    "I love programming."              : "Me encanta programar.",
+    "Password"                         : "Contraseña",
+    "Password is required"             : "El campo :attribute es obligatorio."
 }

@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\App;
 Route::prefix('author')->name('author.')->group(function(){
 
     Route::middleware(['guest:web'])->group(function(){
-        App::setLocale('es');
         Route::view('/login','back.pages.auth.login')->name('login');
         Route::view('/forgot-password','back.pages.auth.forgot')->name('forgot-password');
         Route::get('/password/reset/{token}',[AuthorController::class, 'ResetForm'])->name('reset-form');
